@@ -1,0 +1,164 @@
+%\title{My two column CV}
+%
+% tccv (two columns curriculum vitae) is a LaTeX class inspired by
+% the template found at latextemplates.com by Alessandro Plasmati.
+%
+% Create by Nicola Fontana, the original files can be downloaded from:
+% http://dev.entidi.com/p/tccv/
+%
+\documentclass{tccv}
+\usepackage[english]{babel}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\usepackage{fontawesome5}
+\usepackage[ddmmyyyy]{datetime}
+
+\addbibresource{references.bib}
+
+
+\newcommand{\itempoint}{\faAngleDoubleRight~}
+\newcommand{\sphere}{360\textdegree~}
+
+\newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize\color{gray}Last updated on #1}}
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+  \begin{center}
+  {\usekomafont{part} Eugene Lyapustin} \\
+  \vspace{5pt}
+  % \begin{abstract}
+\faMapMarker~Moscow, Russia ~ \faEnvelope~\href{mailto:unishifft@gmail.com}{unishifft@gmail.com} ~ \faPhone~+7 925 538 39 58 ~ \faTelegramPlane~\href{https://t.me/unishifft}{unishifft}\\
+\faLinkedin~\href{https://linkedin.com/in/eugene-lyapustin}{eugene-lyapustin} ~ \faGithub~\href{https://github.com/unishift/}{unishift}
+  % \end{abstract}
+  \end{center}
+\end{@twocolumnfalse}
+]
+
+% \part{Eugene Lyapustin}{Date of Birth: 06.03.1998 ~ Moscow, Russia ~ \href{mailto:unishifft@gmail.com}{unishifft@gmail.com}}
+
+\section{Work experience}
+
+\begin{eventlist}
+
+\item{October 2021 -- Present}
+     {VK}
+     {Research Engineer}
+
+     \itempoint Video classification (NSFW, spam, duplicates)
+
+     \itempoint Integration with search engines
+
+     \itempoint Crowdsource dataset collection
+
+\item{Sep 2018 -- Aug 2022}
+     {MSU Graphics \& Media Lab}
+     {Research \& Development Engineer}
+
+     \itempoint \sphere video stabilization and quality assessment
+
+     \itempoint Video-conferencing quality assessment
+
+     \itempoint Research in Video Super-Resolution
+
+     \itempoint Research team supervision
+
+
+\item{May 2021 -- Aug 2021}
+     {Google Summer of Code @ \\ Intel® Video and Audio for Linux}
+     {Student Developer}
+
+     \itempoint GPU-accelerated \sphere video projection conversion for libXcam
+
+     \itempoint Computational geometry
+
+     \href{https://unishift.github.io/project/2021-08-20-gsoc-libxcam}{Project description~\faExternalLink*}
+
+\item{May 2019 -- Aug 2019}
+     {Google Summer of Code @ \\ FFmpeg}
+     {Student Developer}
+     
+     \itempoint \sphere video projection conversion
+
+     \itempoint Created \texttt{v360} filter
+
+     \href{https://unishift.github.io/project/2019-08-26-gsoc-ffmpeg}{Project description~\faExternalLink*}
+
+\end{eventlist}
+
+\section{Skills}
+
+\begin{factlist}
+
+\item{Python}
+     {stdlib, NumPy, SciPy, scikit-learn/image/video, OpenCV, PyTorch, Keras, ONNX, Pandas, Matplotlib, seaborn, debug/profile tools}
+
+\item{C++}
+     {stdlib, Eigen, OpenCV, Ceres Solver}
+
+\item{other}
+     {Git, CI, \LaTeX}
+
+\end{factlist}
+
+
+\vspace{200pt}
+
+\section{Education}
+
+\begin{eventlist}
+
+\item{2020 -- 2022}
+     {Lomonosov \\ Moscow State University}
+     {Master of Computer Science}
+
+     \itempoint Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
+
+     \itempoint Specialization: Computer Vision, Graphics and Image Processing
+
+     \itempoint Completed courses on Machine Learning, Deep Learning and MSU AI course
+
+     \itempoint GPA: 4.72 / 5.00
+
+\item{2016 -- 2020}
+     {Lomonosov \\ Moscow State University}
+     {Bachelor of Computer Science}
+
+     \itempoint Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
+
+     \itempoint Completed courses on Machine Learning, Computer Graphics and Computer Vision
+
+     \itempoint GPA: 4.70 / 5.00
+\end{eventlist}
+
+\section{Projects}
+
+\begin{yearlist}
+
+\item{2020--Present}
+     {\href{https://videoprocessing.ai/benchmarks/video-super-resolution.html}{Video Super-Resolution benchmark~\faExternalLink*}}
+     {Team leader}
+
+\item{2020--2022}
+     {Media compression and video processing courses}
+     {Assistant and teacher at MSU and HSE universities} 
+
+\end{yearlist}
+
+\section{Communication skills}
+
+\begin{factlist}
+\item{English}{Full working proficiency}
+\item{Russian}{Native speaker}
+\end{factlist}
+
+% \defbibentryset{kirillova2022erqa}{lyapustin2022towards}
+\nocite{kirillova2022erqa}
+\nocite{lyapustin2022towards}
+
+\printbibliography[title={Publications}]
+
+\updateinfo
+
+\end{document}
