@@ -139,16 +139,17 @@
 %         {company}
 %         {role}
 %     One or more paragraphs describing what achieved during this application.
+\definecolor{darkergray}{rgb}{0.33, 0.33, 0.33}
 \newenvironment{eventlist}{%
     \newcommand*\inskip{}
     \renewcommand\item[3]{%
 	\inskip%
-	{\raggedleft\textsc{##1}\\[1pt]}
+	{\color{darkergray}{\textsc{##1}}\\[1pt]}%
 	\ifstrempty{##2}{}{{\Large\textbf{##2}\\[2pt]}}
-	{\Large\textit{##3}}
-	\medskip
+	{\Large{##3}}
+	\smallskip
 	\renewcommand\inskip{\bigskip}}}
-    {\bigskip}
+    % {\bigskip}
 
 % Use only \item inside this environment, no other macros
 % are allowed:
