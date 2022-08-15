@@ -33,6 +33,8 @@
 \RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
 \RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor}
 \RequirePackage{hyperref}
+\RequirePackage{fontawesome5}
+\RequirePackage{enumitem}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
 % The text is capitalized before being expanded.
@@ -98,38 +100,21 @@
     \raising=\dimexpr-0.7\baselineskip\relax%
     \vskip\raising\hrule height 0.4pt\vskip-\raising}
 
-% Allow conditionals based on the job name. This can usually be set
-% from a command-line argument: check fausto.en.tex for an example.
-%
-%     \ifjob
-%         {jobname}
-%         {content if matches}
-%         {content if does not match}
-\newcommand\ifjob[3]{%
-    \edef\JOBNAME{\jobname}%
-    \edef\PIVOT{\detokenize{#1}}%
-    \ifdefstrequal{\JOBNAME}{\PIVOT}{#2}{#3}%
+% Change itemize style
+\setlist{topsep=0pt, leftmargin=*, nosep, label={\faAngleDoubleRight}}
+
+\definecolor{darkergray}{rgb}{0.33, 0.33, 0.33}
+\newcommand{\daterange}[1]{%
+    {\color{darkergray}{\textsc{#1}}}
 }
 
-% Renders a personal data box:
-%
-%     \personal
-%         [url without scheme, i.e. no http:// prefix]
-%         {address}
-%         {phone number}
-%         {email}
-\newcommand\personal[4][]{%
-    \newcommand\SYMBOL[1]{\raisebox{-2pt}{\Large\ding{##1}}}%
-    \needspace{0.5\textheight}%
-    \newdimen\boxwidth%
-    \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
-    \colorbox[HTML]{F5DD9D}{%
-    \begin{tabularx}{\boxwidth}{c|X}
-    \SYMBOL{45} & {#2}\smallskip\\
-    \SYMBOL{37} & {#3}\smallskip\\
-    \SYMBOL{41} & \href{mailto:#4}{#4}
-    \ifstrempty{#1}{}{\smallskip\\ \SYMBOL{218} & \href{http://#1}{#1}}
-    \end{tabularx}}}
+\newcommand{\position}[1]{%
+    {\Large{#1}}
+}
+
+\newcommand{\job}[1]{%
+    {\Large\textbf{#1}}
+}
 
 % Every \item can be followed by one or more paragraphs
 % of description:
@@ -139,17 +124,16 @@
 %         {company}
 %         {role}
 %     One or more paragraphs describing what achieved during this application.
-\definecolor{darkergray}{rgb}{0.33, 0.33, 0.33}
 \newenvironment{eventlist}{%
     \newcommand*\inskip{}
-    \renewcommand\item[3]{%
+    \newcommand\evententry[3]{%
 	\inskip%
-	{\color{darkergray}{\textsc{##1}}\\[1pt]}%
-	\ifstrempty{##2}{}{{\Large\textbf{##2}\\[2pt]}}
-	{\Large{##3}}
+	\ifstrempty{##1}{}{\daterange{##1}\\}%
+	\ifstrempty{##2}{}{\job{##2}\\}%
+    \ifstrempty{##3}{}{\position{##3}}%
 	\smallskip
 	\renewcommand\inskip{\bigskip}}}
-    % {\bigskip}
+    {\bigskip}
 
 % Use only \item inside this environment, no other macros
 % are allowed:
@@ -166,6 +150,24 @@
 	& \textit{##4}\medskip\\}
     \tabularx{\linewidth}{rX}}
     {\endtabularx}
+
+
+% Use only \item inside this environment, no other macros
+% are allowed:
+%
+%     \item
+%         [what has been achieved]
+%         {years}
+%         {subject}
+%         {notes}
+\newenvironment{compactyearlist}{%
+    \renewcommand\item[4][]{%
+    \textsc{##2} \\
+    {##3} \\
+    \textsc{##1} \\
+    \textit{##4}\medskip\\}}
+    % \tabularx{\linewidth}{rX}}
+    % {\endtabularx}
 
 
 % Use only \item inside this environment: no other macros

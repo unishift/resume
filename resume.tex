@@ -10,13 +10,12 @@
 \usepackage[english]{babel}
 \usepackage{biblatex}
 \usepackage{csquotes}
-\usepackage{fontawesome5}
 \usepackage[ddmmyyyy]{datetime}
 
 \addbibresource{references.bib}
 
 
-\newcommand{\itempoint}{\faAngleDoubleRight~}
+% \newcommand{\itempoint}{\faAngleDoubleRight~}
 \newcommand{\sphere}{360\textdegree~}
 
 
@@ -43,49 +42,44 @@
 
 \begin{eventlist}
 
-\item{October 2021 -- Present}
+\evententry{October 2021 -- Present}
      {VK}
      {Research Engineer}
+\begin{itemize}
+     \item Deep learning for video classification (NSFW, spam, duplicates)
+     \item Integration with search engines
+     \item Crowdsource dataset collection
+\end{itemize}
 
-     \itempoint Video classification (NSFW, spam, duplicates)
-
-     \itempoint Integration with search engines
-
-     \itempoint Crowdsource dataset collection
-
-\item{Sep 2018 -- Aug 2022}
+\evententry{Sep 2018 -- Aug 2022}
      {MSU Graphics \& Media Lab}
      {Research \& Development Engineer}
-     
-     \vspace{-10pt}
-     \itempoint \sphere video stabilization and quality assessment
+\vspace{-10pt} % \& smh forces vskip here
+\begin{itemize}
+     \item \sphere video stabilization and \\quality assessment
+     \item Video quality assessment
+     \item Video Super-Resolution
+     \item Research team supervision
+\end{itemize}
 
-     \itempoint Video-conferencing quality assessment
-
-     \itempoint Research in Video Super-Resolution
-
-     \itempoint Research team supervision
-
-
-\item{May 2021 -- Aug 2021}
+\evententry{May 2021 -- Aug 2021}
      {Google Summer of Code @ \\ Intel® Video and Audio for Linux}
      {Student Developer}
+\begin{itemize}
+     \item \sphere video projection \\ conversion for libXcam
+     \item GPU-acceleration using GLES 
+\end{itemize}
+\href{https://unishift.github.io/project/2021-08-20-gsoc-libxcam}{Project description~\faExternalLink*}
 
-     \itempoint GPU-accelerated \sphere video projection conversion for libXcam
-
-     \itempoint Computational geometry
-
-     \href{https://unishift.github.io/project/2021-08-20-gsoc-libxcam}{Project description~\faExternalLink*}
-
-\item{May 2019 -- Aug 2019}
+\evententry{May 2019 -- Aug 2019}
      {Google Summer of Code @ \\ FFmpeg}
      {Student Developer}
-     
-     \itempoint \sphere video projection conversion
-
-     \itempoint Created \texttt{v360} filter
-
-     \href{https://unishift.github.io/project/2019-08-26-gsoc-ffmpeg}{Project description~\faExternalLink*}
+\begin{itemize}
+     \item \sphere video projection conversion
+     \item Computational geometry
+     \item Created \texttt{v360} filter for \texttt{ffmpeg}
+\end{itemize}
+\href{https://unishift.github.io/project/2019-08-26-gsoc-ffmpeg}{Project description~\faExternalLink*}
 
 \end{eventlist}
 
@@ -94,58 +88,53 @@
 \begin{factlist}
 
 \item{Python}
-     {stdlib, NumPy, SciPy, scikit-learn/image/video, OpenCV, PyTorch, Keras, ONNX, Pandas, Matplotlib, seaborn, debug/profile tools}
+     {stdlib, NumPy, SciPy, scikit-learn/image/video, OpenCV, PyTorch, TensorFlow, ONNX, Pandas, Matplotlib, seaborn, debug/profile tools}
 
 \item{C++}
      {stdlib, Eigen, OpenCV, Ceres Solver}
 
 \item{other}
-     {CUDA, OpenCL, Git, CI, \LaTeX}
+     {CUDA, OpenCL, Linux, Git, CI, \LaTeX}
 
 \end{factlist}
-
-\vspace{200pt}
+\vfill
 
 \section{Education}
 
-{\Large\textbf{Lomonosov\\Moscow State University}}
-\smallskip     
+\begin{eventlist}
 
-     \itempoint Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
-     
-     \itempoint Completed courses on Parallel Programming, Computer Graphics, Machine Learning, Deep Learning, Computer Vision, NLP, and MSU AI course
+\evententry{}
+     {Lomonosov\\Moscow State University}
+     {}
+\vspace{-10pt}
+\begin{itemize}
+     \item Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
+     \item Completed courses on Parallel Programming, Computer Graphics, Machine Learning, Deep Learning, Computer Vision, NLP
+\end{itemize}
 
-\bigskip
-{\color{darkergray}{\textsc{2020 -- 2022}}\\[1pt]}%
-{\Large{Master of Computer Science}}
-\smallskip
+\evententry{2020 -- 2022}
+     {}
+     {Master of Computer Science}
+\begin{itemize}
+     \item Specialization: Computer Vision, Graphics and Image Processing
+     \item GPA: 4.72 / 5.00
+\end{itemize}
 
+\evententry{2016 -- 2020}
+     {}
+     {Bachelor of Computer Science}
+\begin{itemize}
+     \item GPA: 4.70 / 5.00
+\end{itemize}
 
-     \itempoint Specialization: Computer Vision, Graphics and Image Processing
-
-
-     \itempoint GPA: 4.72 / 5.00
-
-\bigskip
-{\color{darkergray}{\textsc{2016 -- 2020}}\\[1pt]}%
-{\Large{Bachelor of Computer Science}}
-\smallskip
-
-     \itempoint GPA: 4.70 / 5.00
+\end{eventlist}
 
 \section{Projects}
 
-\begin{yearlist}
-
-\item{2020--Present}
-     {\href{https://videoprocessing.ai/benchmarks/video-super-resolution.html}{Video Super-Resolution benchmark~\faExternalLink*}}
-     {Team leader}
-
-\item{2020--2022}
-     {Media compression and video processing courses}
-     {Assistant and teacher at MSU and HSE universities} 
-
-\end{yearlist}
+\begin{itemize}
+     \item Team leader at \href{https://videoprocessing.ai/benchmarks/video-super-resolution.html}{Video Super-Resolution benchmark~\faExternalLink*}
+     \item Assistant and teacher for media compression and video processing courses at MSU and HSE universities
+\end{itemize}
 
 \section{Languages}
 
