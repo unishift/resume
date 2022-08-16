@@ -35,6 +35,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome5}
 \RequirePackage{enumitem}
+\RequirePackage{makecell}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
 % The text is capitalized before being expanded.
@@ -100,10 +101,13 @@
     \raising=\dimexpr-0.7\baselineskip\relax%
     \vskip\raising\hrule height 0.4pt\vskip-\raising}
 
-% Change itemize style
-\setlist{topsep=0pt, leftmargin=*, nosep, label={\faAngleDoubleRight}}
-
 \definecolor{darkergray}{rgb}{0.33, 0.33, 0.33}
+
+% Change itemize style
+\setlist[itemize]{topsep=0pt, leftmargin=*, nosep}
+\setlist[itemize, 1]{label={\faAngleDoubleRight}}
+\setlist[itemize, 2]{label={\faAngleRight}}
+
 \newcommand{\daterange}[1]{%
     {\color{darkergray}{\textsc{#1}}}
 }
@@ -180,7 +184,7 @@
     \newdimen\unbaseline
     \unbaseline=\dimexpr-\baselinestretch\baselineskip\relax
     \renewcommand\item[2]{%
-	\textsc{##1} & {\raggedright ##2\medskip\\}\\[\unbaseline]}
+	\textsc{\makecell[tr]{##1}} & {\raggedright ##2\medskip\\}\\[\unbaseline]}
     \tabularx{\linewidth}{rX}}
     {\endtabularx}
 

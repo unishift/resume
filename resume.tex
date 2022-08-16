@@ -14,10 +14,7 @@
 
 \addbibresource{references.bib}
 
-
-% \newcommand{\itempoint}{\faAngleDoubleRight~}
 \newcommand{\sphere}{360\textdegree~}
-
 
 \newcommand{\updateinfo}[1][\today]{\par\vfill\hfill{\scriptsize\color{darkergray}Last updated on #1}}
 
@@ -28,10 +25,8 @@
   \begin{center}
   {\usekomafont{part} Eugene Lyapustin} \\
   \vspace{5pt}
-  % \begin{abstract}
-\faMapMarker~Moscow, Russia ~ \faEnvelope~\href{mailto:unishifft@gmail.com}{unishifft@gmail.com} ~ \faPhone~+7 925 538 39 58 ~ \faTelegramPlane~\href{https://t.me/unishifft}{unishifft}\\
+\faMapMarker~Moscow, Russia ~ \faPhone~+7 925 538 39 58 ~ \faEnvelope~\href{mailto:unishifft@gmail.com}{unishifft@gmail.com} ~ \faTelegramPlane~\href{https://t.me/unishifft}{unishifft}\\
 \faLinkedin~\href{https://linkedin.com/in/eugene-lyapustin}{eugene-lyapustin} ~ \faGithub~\href{https://github.com/unishift/}{unishift}
-  % \end{abstract}
   \end{center}
 \end{@twocolumnfalse}
 ]
@@ -46,9 +41,8 @@
      {VK}
      {Research Engineer}
 \begin{itemize}
-     \item Deep learning for video classification (NSFW, spam, duplicates)
-     \item Integration with search engines
-     \item Crowdsource dataset collection
+     \item Developing video classification models \\ (NSFW, spam, duplicates) for search engine
+     \item Setting up crowdsource dataset collection
 \end{itemize}
 
 \evententry{Sep 2018 -- Aug 2022}
@@ -56,18 +50,22 @@
      {Research \& Development Engineer}
 \vspace{-10pt} % \& smh forces vskip here
 \begin{itemize}
-     \item \sphere video stabilization and \\quality assessment
-     \item Video quality assessment
-     \item Video Super-Resolution
-     \item Research team supervision
+     \item Researched topics on:
+     \begin{itemize}
+          \item \sphere video stabilization
+          \item Video quality assessment
+          \item Video Super-Resolution \href{https://videoprocessing.ai/benchmarks/video-super-resolution.html}{~\faExternalLink*}
+     \end{itemize}
+     \item Developed quality metric for video-conference applications during commercial project
+     \item Supervised research team on Video Super-Resolution
 \end{itemize}
 
 \evententry{May 2021 -- Aug 2021}
      {Google Summer of Code @ \\ Intel® Video and Audio for Linux}
      {Student Developer}
 \begin{itemize}
-     \item \sphere video projection \\ conversion for libXcam
-     \item GPU-acceleration using GLES 
+     \item Implemented \sphere video projection conversion for libXcam library
+     \item Used GLES for GPU-acceleration
 \end{itemize}
 \href{https://unishift.github.io/project/2021-08-20-gsoc-libxcam}{Project description~\faExternalLink*}
 
@@ -75,28 +73,27 @@
      {Google Summer of Code @ \\ FFmpeg}
      {Student Developer}
 \begin{itemize}
-     \item \sphere video projection conversion
-     \item Computational geometry
-     \item Created \texttt{v360} filter for \texttt{ffmpeg}
+     \item Developed \texttt{v360} filter for \sphere video projection conversion for ffmpeg
 \end{itemize}
 \href{https://unishift.github.io/project/2019-08-26-gsoc-ffmpeg}{Project description~\faExternalLink*}
 
 \end{eventlist}
 
-\section{Skills}
+\section{Technical stack}
 
 \begin{factlist}
 
 \item{Python}
-     {stdlib, NumPy, SciPy, scikit-learn/image/video, OpenCV, PyTorch, TensorFlow, ONNX, Pandas, Matplotlib, seaborn, debug/profile tools}
+     {NumPy, SciPy, scikit-learn, Pandas,, OpenCV, PyTorch, TensorFlow, ONNX, Albumentations, Matplotlib}
 
 \item{C++}
-     {stdlib, Eigen, OpenCV, Ceres Solver}
+     {stdlib, OpenCV, Eigen, Ceres Solver, CUDA, OpenCL}
 
 \item{other}
-     {CUDA, OpenCL, Linux, Git, CI, \LaTeX}
+     {Linux, Git, CI, \LaTeX}
 
 \end{factlist}
+
 \vfill
 
 \section{Education}
@@ -109,15 +106,24 @@
 \vspace{-10pt}
 \begin{itemize}
      \item Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
-     \item Completed courses on Parallel Programming, Computer Graphics, Machine Learning, Deep Learning, Computer Vision, NLP
+     \item Completed courses on:
+     \begin{itemize}
+          \item Parallel Programming
+          \item Computer Graphics
+          \item Computer Vision
+          \item NLP
+     \end{itemize}
 \end{itemize}
 
 \evententry{2020 -- 2022}
      {}
      {Master of Computer Science}
 \begin{itemize}
-     \item Specialization: Computer Vision, Graphics and Image Processing
      \item GPA: 4.72 / 5.00
+     \item Specialization: Computer Vision, Graphics and Image Processing
+     \item Research on Video Super-Resolution
+     \item Taught media compression and \\ video processing
+     \item Supervised undergraduate students
 \end{itemize}
 
 \evententry{2016 -- 2020}
@@ -125,29 +131,29 @@
      {Bachelor of Computer Science}
 \begin{itemize}
      \item GPA: 4.70 / 5.00
+     \item Research on \sphere video processing 
 \end{itemize}
 
 \end{eventlist}
 
-\section{Projects}
-
-\begin{itemize}
-     \item Team leader at \href{https://videoprocessing.ai/benchmarks/video-super-resolution.html}{Video Super-Resolution benchmark~\faExternalLink*}
-     \item Assistant and teacher for media compression and video processing courses at MSU and HSE universities
-\end{itemize}
-
 \section{Languages}
 
 \begin{factlist}
-\item{English}{Full working proficiency}
-\item{Russian}{Native speaker}
+     \item{English}{Full working proficiency}
+     \item{Russian}{Native speaker}
 \end{factlist}
 
-% \defbibentryset{kirillova2022erqa}{lyapustin2022towards}
-\nocite{kirillova2022erqa}
-\nocite{lyapustin2022towards}
+% \nocite{kirillova2022erqa}
+% \nocite{lyapustin2022towards}
 
-\printbibliography[title={Publications}]
+% \printbibliography[title={Publications}]
+
+\section{Publications}
+
+\begin{factlist}
+     \item{2022}{ERQA: Edge-restoration \\ Quality Assessment for Video Super-Resolution, VISAPP [\href{https://arxiv.org/abs/2110.09992}{Paper}] [\href{https://github.com/msu-video-group/ERQA}{Code}]}
+     \item{2022}{Towards True Detail Restoration for Super-Resolution: A Benchmark and a Quality Metric, under revision [\href{https://arxiv.org/abs/2203.08923}{Paper}]}
+\end{factlist}
 
 \updateinfo
 
