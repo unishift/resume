@@ -30,7 +30,7 @@
 \LoadClassWithOptions{scrartcl}
 
 \setcounter{secnumdepth}{-1}
-\RequirePackage[hmargin=1.25cm,vmargin=1.25cm,twocolumn,columnsep=1.25cm]{geometry}
+\RequirePackage[hmargin=0.5cm,vmargin=0.5cm,onecolumn,columnsep=1.25cm]{geometry}
 \RequirePackage{bookman,etoolbox,needspace,pifont,tabularx,xcolor}
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome5}
@@ -76,13 +76,12 @@
 % subject (first and last name) with the text from the optional
 % argument underneath it
 \renewcommand\part[2][]{%
-    \twocolumn[%
     \begin{center}
 	\vskip-\lastskip%
 	{\usekomafont{part} #2} \medskip\\
 	{\fontfamily{pzc}\selectfont\Huge {#1}}
 	\bigskip
-    \end{center}]}
+    \end{center}}
 
 
 \RedeclareSectionCommand
@@ -113,11 +112,11 @@
 }
 
 \newcommand{\position}[1]{%
-    {\Large{#1}}
+    {\large{#1}}
 }
 
 \newcommand{\job}[1]{%
-    {\Large\textbf{#1}}
+    {\large\textbf{#1}}
 }
 
 % Every \item can be followed by one or more paragraphs
@@ -130,11 +129,13 @@
 %     One or more paragraphs describing what achieved during this application.
 \newenvironment{eventlist}{%
     \newcommand*\inskip{}
-    \newcommand\evententry[3]{%
+    \newcommand\evententry[4]{%
 	\inskip%
-	\ifstrempty{##1}{}{\daterange{##1}\\}%
-	\ifstrempty{##2}{}{\job{##2}\\}%
+	\ifstrempty{##2}{}{\job{##2}}%
+    \ifstrempty{##1}{}{\hfill\daterange{##1}}%
+
     \ifstrempty{##3}{}{\position{##3}}%
+    \ifstrempty{##3}{}{\hfill\daterange{##4}}%
 	\smallskip
 	\renewcommand\inskip{\bigskip}}}
     {\bigskip}
