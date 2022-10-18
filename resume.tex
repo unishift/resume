@@ -22,45 +22,12 @@
 
 {\usekomafont{part} Eugene Lyapustin} \hfill \faMapMarker~Yerevan, Armenia \\
 {\Large Research Engineer, Computer Vision} \hfill \faPhone~+7 925 538 39 58 \\
-Open to relocation \hfill \faEnvelope~\href{mailto:unishifft@gmail.com}{unishifft@gmail.com} ~ \faTelegramPlane~\href{https://t.me/unishifft}{unishifft}\\
+\null \hfill \faEnvelope~\href{mailto:unishifft@gmail.com}{unishifft@gmail.com} ~ \faTelegramPlane~\href{https://t.me/unishifft}{unishifft}\\
 \null\hfill \faLinkedin~\href{https://linkedin.com/in/eugene-lyapustin}{eugene-lyapustin} ~ \faGithub~\href{https://github.com/unishift/}{unishift}
 
-% \part{Eugene Lyapustin}{Date of Birth: 06.03.1998 ~ Moscow, Russia ~ \href{mailto:unishifft@gmail.com}{unishifft@gmail.com}}
+% \section{}
 
-\section{Summary}
-
-Creative research engineer with 4 years of academic experience and contributions to large code bases both open-source (FFmpeg, PyTorch) and corporate (VK). Advanced in deep learning, 2D/3D computer vision, image/video quality assessment and video processing.
-
-\section{Education}
-
-\begin{eventlist}
-
-\evententry{}
-     {Lomonosov Moscow State University}
-     {Master of Computer Science, GPA: 4.72/5.00}
-     {2020 -- 2022}
-\begin{itemize}
-     \item Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
-     \item Completed courses on:\\
-          \faAngleRight~ Computer Graphics\qquad
-          \faAngleRight~ Machine Learning\qquad
-          \faAngleRight~ Deep Learning\qquad
-          \faAngleRight~ Computer Vision
-     \item Specialization: Computer Vision, Graphics and Image Processing
-     \item Research on Video Super-Resolution
-     % \item Taught media compression and video processing
-     % \item Supervised undergraduate students
-\end{itemize}
-
-% \evententry{}
-%      {}
-%      {Bachelor of Computer Science, GPA: 4.70/5.00}
-%      {2016 -- 2020}
-% \begin{itemize}
-%           \item Research on \sphere video processing 
-% \end{itemize}
-
-\end{eventlist}
+% Creative research engineer with 4 years of academic experience and contributions to large code bases both open-source (FFmpeg, PyTorch) and corporate (VK). Advanced in deep learning, 2D/3D computer vision, image/video quality assessment, and video processing.
 
 \section{Work experience}
 
@@ -71,9 +38,10 @@ Creative research engineer with 4 years of academic experience and contributions
      {Research Engineer}
      {Moscow, Russia}
 \begin{itemize}
-     \item Currently developing multi-modal ranking models for video search engine
-     \item Developed and integrated computer vision models for video classification of NSFW, spam, duplicates
-     \item Set crowdsource dataset collection for models training
+     \item Developed multi-modal ranking models for video search engine \\ using PyTorch and CLIP architecture to calculate similarity between text query and video
+     \item Developed computer vision models for video classification of NSFW, spam, and near duplicates \\ using PyTorch and transfer learning to small datasets
+     \item Implemented scripts for automatic video processing such as frame extraction and resizing \\ using Python and FFmpeg
+     \item Optimized computer vision models for production inference by converting them \\ to ONNX format and quantizing to lower precision with 5 times speed improvement
 \end{itemize}
 
 \evententry{Sep 2018 -- Aug 2022}
@@ -81,9 +49,9 @@ Creative research engineer with 4 years of academic experience and contributions
      {Research \& Development Engineer}
      {Moscow, Russia}
 \begin{itemize}
-     \item Developed detail restoration assessment method for Video Super-Resolution using deep learning 
-     \item Developed quality metric for video-conference applications using machine learning methods
-     \item Developed \sphere video stabilization algorithm using geometric vision and computational geometry
+     \item Developed detail restoration assessment method for Video Super-Resolution \\ using PyTorch and segmentation models
+     \item Developed quality metric for video-conference applications using sklearn \\ and regression models with 20\% higher correlation with subjective evaluation 
+     \item Developed \sphere video stabilization algorithm using C++ and OpenCV by applying \\ geometric vision for 3D camera path reconstruction
      \item Supervised research team of 5 students on Video Super-Resolution project \href{https://videoprocessing.ai/benchmarks/video-super-resolution.html}{~\faExternalLink*}
 \end{itemize}
 
@@ -94,7 +62,6 @@ Creative research engineer with 4 years of academic experience and contributions
 \begin{itemize}
      \item Implemented \sphere video projection conversion for libXcam library\hfill
      \href{https://unishift.github.io/project/2021-08-20-gsoc-libxcam}{Project page~\faExternalLink*}
-     \item Used GLES for GPU-acceleration
 \end{itemize}
 
 \evententry{May 2019 -- Aug 2019}
@@ -102,30 +69,61 @@ Creative research engineer with 4 years of academic experience and contributions
      {Student Developer}
      {Remote}
 \begin{itemize}
-     \item Developed \texttt{v360} filter for \sphere video projection conversion for ffmpeg\hfill
+     \item Developed \texttt{v360} filter for \sphere video projection conversion for FFmpeg\hfill
      \href{https://unishift.github.io/project/2019-08-26-gsoc-ffmpeg}{Project page~\faExternalLink*}
+     \item Used computational geometry for applying transformations between sphere projections
 \end{itemize}
 
 \end{eventlist}
 
-\section{Technical stack}
+\section{Education}
+
+\begin{eventlist}
+
+\evententry{}
+     {Lomonosov Moscow State University}
+     {Master of Computer Science, GPA: 4.72/5.00}
+     {2020 -- 2022}
+     \begin{itemize}
+          \item Thesis: A method for details restoration assessment of Video Super-Resolution
+     \end{itemize}
+% \begin{itemize}
+     % \item Faculty of Computational Mathematics and Cybernetics, Graphics \& Media Lab
+     % \item Completed courses on:\\
+     %      \faAngleRight~ Computer Graphics\qquad
+     %      \faAngleRight~ Machine Learning\qquad
+     %      \faAngleRight~ Deep Learning\qquad
+     %      \faAngleRight~ Computer Vision
+     % \item Specialization: Computer Vision, Graphics and Image Processing
+     % \item Research on Video Super-Resolution
+     % \item Taught media compression and video processing
+     % \item Supervised undergraduate students
+% \end{itemize}
+
+\evententry{}
+     {}
+     {Bachelor of Computer Science, GPA: 4.70/5.00}
+     {2016 -- 2020}
+     \begin{itemize}
+          \item Thesis: A method for \sphere video stabilization and enhancement
+     \end{itemize}
+
+\end{eventlist}
+
+\section{Skills}
 
 \begin{factlist}
 
-\item{Python}
-     {NumPy, SciPy, scikit-learn, Pandas, OpenCV, PyTorch, TensorFlow, ONNX}
+\item{Industry Knowledge}
+     {Computer Vision, Machine Learning, Deep Learning, Geometric Vision, Video Quality Assessment}
 
-\item{C++}
-     {OpenCV, Eigen, Ceres Solver, CUDA, OpenCL}
+\item{Technical Skills}
+     {Python, PyTorch, Pandas, matplotlib, ONNX, C/C++, OpenCV, Eigen, Ceres Solver, OpenCL, Java, Hadoop}
 
-\item{Java}
-     {Hadoop}
-
-\item{other}
-     {Linux, Git, CI, \LaTeX}
+\item{Soft Skills}
+     {Problem Solving, Teamwork, Presentations, Teaching, Leadership}
 
 \end{factlist}
-
 
 \section{Languages}
 
