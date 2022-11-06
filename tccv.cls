@@ -103,7 +103,7 @@
 \definecolor{darkergray}{rgb}{0.33, 0.33, 0.33}
 
 % Change itemize style
-\setlist[itemize]{topsep=0pt, leftmargin=*, nosep}
+\setlist[itemize]{topsep=0pt, leftmargin=*, itemsep=.5pt}
 \setlist[itemize, 1]{label={\faAngleDoubleRight}}
 \setlist[itemize, 2]{label={\faAngleRight}}
 
@@ -137,8 +137,8 @@
     \ifstrempty{##3}{}{\position{##3}}%
     \ifstrempty{##3}{}{\hfill\daterange{##4}}%
 	\smallskip
-	\renewcommand\inskip{\bigskip}}}
-    {\bigskip}
+	\renewcommand\inskip{\medskip}}}
+    {}
 
 % Use only \item inside this environment, no other macros
 % are allowed:
